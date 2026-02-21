@@ -12,4 +12,4 @@ data/vector_store/
 .pytest_cache/
 .ruff_cache/
 docs
-scripts
+# scripts
