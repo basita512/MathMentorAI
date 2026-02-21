@@ -379,15 +379,6 @@ Always use `uv run`:
 uv run streamlit run Home.py
 ```
 
-### API Rate Limits
-Groq free tier is generous but has limits. Check your usage at console.groq.com.
-
-## Documentation
-
-- **Architecture Details**: See [`docs/architecture.md`](docs/architecture.md)
-- **Implementation Walkthrough**: See `brain/walkthrough.md`
-- **Component Tests**: See `scripts/test_*.py`
-- **Configuration Guide**: See YAML files in `config/` directory
 
 ## What I Learned Building This
 
@@ -395,14 +386,6 @@ Groq free tier is generous but has limits. Check your usage at console.groq.com.
 2. **LangGraph** makes complex routing logic much cleaner than manual orchestration
 3. **Observability** is critical - agent tracing helped debug confidence issues
 4. **HITL triggers** at multiple stages catch more edge cases than single-point checks
-
-## Acknowledgments
-
-- **Groq** for blazing-fast Llama 3.3 inference
-- **LangChain/LangGraph** for agent framework
-- **ChromaDB** for embedded vector storage
-- **rank-bm25** for efficient sparse retrieval
-
 
 ---
 
@@ -412,7 +395,7 @@ Groq free tier is generous but has limits. Check your usage at console.groq.com.
 
 ---
 
-```markdown
-**Built for learning** | Hybrid RAG | LangGraph Orchestration | Production Observability
-```
+<p align="center">
+  <strong>Built for learning</strong> | Hybrid RAG | LangGraph Orchestration | Production Observability
+</p>
 
