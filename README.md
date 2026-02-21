@@ -1,7 +1,3 @@
-<p align="center">
-  <img src="https://img.icons8.com/fluency/96/math.png" alt="MathMentorAI Logo" width="80" />
-</p>
-
 <h1 align="center">AI Math Mentor</h1>
 
 <p align="center">
@@ -9,19 +5,16 @@
 </p>
 
 <p align="center">
-  <a href="https://mathmentorai.streamlit.app">
+  <a href="https://aimathmentor-hwn5xtsc4ade5zfwx3ksbza.streamlit.app/">
     <img src="https://img.shields.io/badge/Live_App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live App" />
   </a>
   <img src="https://img.shields.io/badge/LLM-Groq_Llama_3.3-orange?style=for-the-badge" alt="LLM" />
   <img src="https://img.shields.io/badge/Orchestrator-LangGraph-blue?style=for-the-badge" alt="Orchestrator" />
   <img src="https://img.shields.io/badge/Vector_DB-ChromaDB-black?style=for-the-badge" alt="Vector DB" />
-</p>
+</p>    
 
 <p align="center">
-  <a href="docs/architecture.md">Architecture</a> •
-  <a href="docs/API.md">API Reference</a> •
-  <a href="brain/walkthrough.md">Implementation</a> •
-  <a href="brain/deployment_guide.md">Deployment</a>
+  <a href="https://aimathmentor-hwn5xtsc4ade5zfwx3ksbza.streamlit.app/">View Live Deployment</a>
 </p>
 
 ---
