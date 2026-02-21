@@ -1,0 +1,93 @@
+{
+  "topic": "Permutations & Combinations",
+  "formulas": [
+    {
+      "id": "factorial",
+      "name": "Factorial",
+      "formula": "n! = n × (n−1) × ... × 1, 0! = 1",
+      "description": "Product of all positive integers up to n"
+    },
+    {
+      "id": "npr",
+      "name": "Permutation (nPr)",
+      "formula": "nPr = n!/(n−r)!",
+      "description": "Number of ways to arrange r objects from n distinct objects. Order MATTERS."
+    },
+    {
+      "id": "ncr",
+      "name": "Combination (nCr)",
+      "formula": "nCr = n!/[r!(n−r)!]",
+      "description": "Number of ways to select r objects from n. Order does NOT matter."
+    },
+    {
+      "id": "relation_npr_ncr",
+      "name": "Relation nPr and nCr",
+      "formula": "nPr = nCr × r!",
+      "description": "Permutation = Combination × arrangement of selected items"
+    },
+    {
+      "id": "ncr_symmetry",
+      "name": "Symmetry Property",
+      "formula": "nCr = nC(n−r)",
+      "description": "Choosing r items is same as leaving out (n−r) items"
+    },
+    {
+      "id": "pascal_rule",
+      "name": "Pascal's Rule",
+      "formula": "nCr + nC(r−1) = (n+1)Cr",
+      "description": "Used to build Pascal's triangle"
+    },
+    {
+      "id": "circular_permutation",
+      "name": "Circular Permutation",
+      "formula": "(n−1)!",
+      "description": "Linear arrangements / n to remove rotational duplicates",
+      "example": "6 people around a table: (6−1)! = 120"
+    },
+    {
+      "id": "necklace",
+      "name": "Necklace/Bracelet Permutation",
+      "formula": "(n−1)!/2",
+      "description": "Circular permutation with no distinction between clockwise and counterclockwise"
+    },
+    {
+      "id": "identical_objects",
+      "name": "Permutation with Identical Objects",
+      "formula": "n!/(p!q!r!...)",
+      "description": "p, q, r are frequencies of repeated objects",
+      "example": "MISSISSIPPI: 11!/(4!4!2!) = 34650"
+    },
+    {
+      "id": "derangement",
+      "name": "Derangement",
+      "formula": "!n = n!(1 − 1/1! + 1/2! − 1/3! + ... + (−1)^n/n!)",
+      "description": "Permutations where NO element is in its original position",
+      "example": "!4 = 9, !5 = 44"
+    },
+    {
+      "id": "stars_and_bars",
+      "name": "Stars and Bars",
+      "formula": "C(n+r−1, r−1) for n identical objects into r distinct boxes",
+      "description": "Distribution of identical objects. Non-negative solutions to x₁+x₂+...+xr = n."
+    },
+    {
+      "id": "complementary_counting",
+      "name": "Complementary Counting",
+      "formula": "At least one = Total − None",
+      "description": "Count what you DON'T want and subtract from total",
+      "example": "3-digit numbers with at least one 5: 900 − 8×9×9 = 252"
+    },
+    {
+      "id": "selection_with_repetition",
+      "name": "Selection with Repetition",
+      "formula": "Each of r positions has n choices → n^r total",
+      "description": "When repetition is allowed, multiply choices for each position"
+    },
+    {
+      "id": "sum_ncr",
+      "name": "Sum of All Combinations",
+      "formula": "nC0 + nC1 + nC2 + ... + nCn = 2^n",
+      "description": "Total number of subsets of a set with n elements"
+    }
+  ]
+}

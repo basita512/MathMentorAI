@@ -1,0 +1,129 @@
+{
+  "topic": "Limits, Continuity & Differentiability",
+  "formulas": [
+    {
+      "id": "standard_limit_sin",
+      "name": "Standard Limit (sin)",
+      "formula": "lim(x→0) sinx/x = 1",
+      "description": "Most fundamental trig limit, x must be in radians"
+    },
+    {
+      "id": "standard_limit_tan",
+      "name": "Standard Limit (tan)",
+      "formula": "lim(x→0) tanx/x = 1",
+      "description": "Follows from sinx/x limit"
+    },
+    {
+      "id": "standard_limit_cos",
+      "name": "Standard Limit (1−cos)",
+      "formula": "lim(x→0) (1 − cosx)/x² = 1/2",
+      "description": "Common limit involving cosine"
+    },
+    {
+      "id": "standard_limit_exp",
+      "name": "Standard Limit (exponential)",
+      "formula": "lim(x→0) (e^x − 1)/x = 1",
+      "description": "Fundamental exponential limit"
+    },
+    {
+      "id": "standard_limit_log",
+      "name": "Standard Limit (logarithm)",
+      "formula": "lim(x→0) ln(1+x)/x = 1",
+      "description": "Fundamental logarithmic limit"
+    },
+    {
+      "id": "standard_limit_ax",
+      "name": "Standard Limit (a^x)",
+      "formula": "lim(x→0) (a^x − 1)/x = ln(a)",
+      "description": "General exponential limit"
+    },
+    {
+      "id": "standard_limit_e_def",
+      "name": "Definition of e",
+      "formula": "lim(x→∞) (1 + 1/x)^x = e",
+      "description": "Euler's number definition as a limit",
+      "example": "Also: lim(x→0) (1+x)^(1/x) = e"
+    },
+    {
+      "id": "standard_limit_xn",
+      "name": "Standard Limit (power)",
+      "formula": "lim(x→a) (x^n − a^n)/(x − a) = na^(n−1)",
+      "description": "Useful for algebraic limits"
+    },
+    {
+      "id": "lhopital",
+      "name": "L'Hôpital's Rule",
+      "formula": "lim f(x)/g(x) = lim f'(x)/g'(x) when 0/0 or ∞/∞",
+      "description": "Differentiate numerator and denominator SEPARATELY. Can apply repeatedly.",
+      "use_case": "Use when direct substitution gives 0/0 or ∞/∞"
+    },
+    {
+      "id": "sandwich_theorem",
+      "name": "Squeeze (Sandwich) Theorem",
+      "formula": "If g(x) ≤ f(x) ≤ h(x) and lim g = lim h = L, then lim f = L",
+      "description": "Useful when direct computation is difficult"
+    },
+    {
+      "id": "derivative_definition",
+      "name": "Derivative (First Principle)",
+      "formula": "f'(x) = lim(h→0) [f(x+h) − f(x)]/h",
+      "description": "Definition of derivative from first principles"
+    },
+    {
+      "id": "continuity_condition",
+      "name": "Continuity Condition",
+      "formula": "f is continuous at x=a if lim(x→a) f(x) = f(a)",
+      "description": "Three conditions: f(a) exists, limit exists, they are equal"
+    },
+    {
+      "id": "differentiability_condition",
+      "name": "Differentiability Condition",
+      "formula": "LHD = RHD at x = a",
+      "description": "Left-hand derivative must equal right-hand derivative. Differentiable ⟹ Continuous (but NOT vice versa)",
+      "example": "f(x) = |x| is continuous but NOT differentiable at x = 0"
+    },
+    {
+      "id": "power_rule",
+      "name": "Power Rule",
+      "formula": "d/dx(x^n) = nx^(n−1)",
+      "description": "Most basic differentiation rule"
+    },
+    {
+      "id": "product_rule",
+      "name": "Product Rule",
+      "formula": "d/dx(uv) = u'v + uv'",
+      "description": "Derivative of product of two functions"
+    },
+    {
+      "id": "quotient_rule",
+      "name": "Quotient Rule",
+      "formula": "d/dx(u/v) = (u'v − uv')/v²",
+      "description": "Derivative of quotient"
+    },
+    {
+      "id": "chain_rule",
+      "name": "Chain Rule",
+      "formula": "dy/dx = dy/du × du/dx",
+      "description": "Derivative of composite function f(g(x))"
+    },
+    {
+      "id": "rolle",
+      "name": "Rolle's Theorem",
+      "formula": "If f(a) = f(b), then ∃c ∈ (a,b) such that f'(c) = 0",
+      "description": "Special case of MVT when f(a) = f(b). f must be continuous on [a,b] and differentiable on (a,b)."
+    },
+    {
+      "id": "mvt",
+      "name": "Mean Value Theorem",
+      "formula": "f'(c) = [f(b) − f(a)]/(b − a) for some c ∈ (a,b)",
+      "description": "Guarantees existence of point where instantaneous rate equals average rate"
+    },
+    {
+      "id": "implicit_diff",
+      "name": "Implicit Differentiation",
+      "formula": "Differentiate both sides w.r.t. x, treat y as function of x",
+      "description": "Used when y cannot be explicitly written as function of x",
+      "example": "x² + y² = r²: 2x + 2y(dy/dx) = 0 → dy/dx = −x/y"
+    }
+  ]
+}

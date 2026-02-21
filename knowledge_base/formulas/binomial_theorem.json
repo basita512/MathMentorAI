@@ -1,0 +1,92 @@
+{
+  "topic": "Binomial Theorem",
+  "formulas": [
+    {
+      "id": "binomial_expansion",
+      "name": "Binomial Expansion",
+      "formula": "(a + b)^n = Σ(r=0 to n) nCr · a^(n−r) · b^r",
+      "description": "Expansion has (n+1) terms"
+    },
+    {
+      "id": "general_term",
+      "name": "General Term",
+      "formula": "T_{r+1} = nCr · a^(n−r) · b^r",
+      "description": "The (r+1)th term of the binomial expansion. Watch signs if b is negative!",
+      "example": "In (2x−3)⁵: T₃ = 5C2·(2x)³·(−3)² = 10·8x³·9 = 720x³"
+    },
+    {
+      "id": "middle_term_even",
+      "name": "Middle Term (Even n)",
+      "formula": "T_{(n/2)+1} is the single middle term",
+      "description": "When n is even, there is exactly one middle term"
+    },
+    {
+      "id": "middle_terms_odd",
+      "name": "Middle Terms (Odd n)",
+      "formula": "T_{(n+1)/2} and T_{(n+3)/2} are the two middle terms",
+      "description": "When n is odd, there are two middle terms"
+    },
+    {
+      "id": "independent_term",
+      "name": "Term Independent of x",
+      "formula": "Set power of x in general term = 0 and solve for r",
+      "description": "Find r such that the exponent of x in T_{r+1} equals zero",
+      "example": "In (x² + 1/x)⁶: power = 12−3r = 0 → r = 4 → T₅ = 6C4 = 15"
+    },
+    {
+      "id": "sum_of_coefficients",
+      "name": "Sum of Coefficients",
+      "formula": "Put x = 1 to get sum of all coefficients",
+      "description": "Sum of coefficients of (1+x)^n = 2^n"
+    },
+    {
+      "id": "alternating_coefficients",
+      "name": "Alternating Sum of Coefficients",
+      "formula": "Put x = −1: nC0 − nC1 + nC2 − ... = 0",
+      "description": "Alternating sum of binomial coefficients equals zero"
+    },
+    {
+      "id": "sum_binomial_coefficients",
+      "name": "Sum of Binomial Coefficients",
+      "formula": "nC0 + nC1 + nC2 + ... + nCn = 2^n",
+      "description": "Total of all binomial coefficients"
+    },
+    {
+      "id": "greatest_coefficient",
+      "name": "Greatest Coefficient",
+      "formula": "nC(n/2) when n is even; nC((n−1)/2) or nC((n+1)/2) when n is odd",
+      "description": "The largest binomial coefficient in the expansion"
+    },
+    {
+      "id": "greatest_term",
+      "name": "Greatest Term",
+      "formula": "T_{r+1}/T_r ≥ 1 gives range of r for greatest term",
+      "description": "Compare consecutive terms to find the greatest one"
+    },
+    {
+      "id": "binomial_approximation",
+      "name": "Binomial Approximation",
+      "formula": "(1 + x)^n ≈ 1 + nx for |x| << 1",
+      "description": "First-order approximation for small x"
+    },
+    {
+      "id": "binomial_three_term",
+      "name": "Binomial Approximation (3 terms)",
+      "formula": "(1 + x)^n ≈ 1 + nx + n(n−1)x²/2 for |x| << 1",
+      "description": "Second-order approximation for better accuracy",
+      "example": "(1.02)^5 ≈ 1 + 5(0.02) + 10(0.0004) = 1.104"
+    },
+    {
+      "id": "pascal_rule",
+      "name": "Pascal's Rule",
+      "formula": "nCr + nC(r−1) = (n+1)Cr",
+      "description": "Each entry in Pascal's triangle is sum of two entries above it"
+    },
+    {
+      "id": "ncr_symmetry",
+      "name": "Symmetry Property",
+      "formula": "nCr = nC(n−r)",
+      "description": "Binomial coefficients are symmetric"
+    }
+  ]
+}

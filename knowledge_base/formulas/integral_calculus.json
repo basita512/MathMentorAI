@@ -1,0 +1,133 @@
+{
+  "topic": "Integral Calculus",
+  "formulas": [
+    {
+      "id": "power_integral",
+      "name": "Power Rule",
+      "formula": "∫x^n dx = x^(n+1)/(n+1) + C, n ≠ −1",
+      "description": "Basic power rule of integration"
+    },
+    {
+      "id": "log_integral",
+      "name": "Logarithmic Integral",
+      "formula": "∫1/x dx = ln|x| + C",
+      "description": "Special case when n = -1"
+    },
+    {
+      "id": "exponential_integral",
+      "name": "Exponential Integral",
+      "formula": "∫e^x dx = e^x + C",
+      "description": "Integration of e^x"
+    },
+    {
+      "id": "exponential_ax",
+      "name": "Exponential (base a)",
+      "formula": "∫a^x dx = a^x/ln(a) + C",
+      "description": "Integration of general exponential"
+    },
+    {
+      "id": "sin_integral",
+      "name": "Sine Integral",
+      "formula": "∫sinx dx = −cosx + C",
+      "description": "Standard trigonometric integral"
+    },
+    {
+      "id": "cos_integral",
+      "name": "Cosine Integral",
+      "formula": "∫cosx dx = sinx + C",
+      "description": "Standard trigonometric integral"
+    },
+    {
+      "id": "sec2_integral",
+      "name": "Secant Squared Integral",
+      "formula": "∫sec²x dx = tanx + C",
+      "description": "Integral appearing in many trig substitution problems"
+    },
+    {
+      "id": "cosec2_integral",
+      "name": "Cosecant Squared Integral",
+      "formula": "∫cosec²x dx = −cotx + C",
+      "description": "Standard trigonometric integral"
+    },
+    {
+      "id": "secx_tanx_integral",
+      "name": "Sec·Tan Integral",
+      "formula": "∫secx tanx dx = secx + C",
+      "description": "Standard trigonometric integral"
+    },
+    {
+      "id": "inverse_trig_sin",
+      "name": "Inverse Sine Integral",
+      "formula": "∫1/√(1−x²) dx = sin⁻¹(x) + C",
+      "description": "Produces inverse trigonometric function"
+    },
+    {
+      "id": "inverse_trig_tan",
+      "name": "Inverse Tangent Integral",
+      "formula": "∫1/(1+x²) dx = tan⁻¹(x) + C",
+      "description": "Produces inverse tangent function"
+    },
+    {
+      "id": "inverse_trig_sec",
+      "name": "Inverse Secant Integral",
+      "formula": "∫1/(x√(x²−1)) dx = sec⁻¹(x) + C",
+      "description": "Produces inverse secant function"
+    },
+    {
+      "id": "integration_by_parts",
+      "name": "Integration by Parts",
+      "formula": "∫u dv = uv − ∫v du",
+      "description": "ILATE rule for choosing u: Inverse trig > Log > Algebraic > Trig > Exponential",
+      "example": "∫x·e^x dx: u=x, dv=e^x dx → xe^x − e^x + C"
+    },
+    {
+      "id": "partial_fractions",
+      "name": "Partial Fractions",
+      "formula": "P(x)/Q(x) = A/(x−a) + B/(x−b) + ...",
+      "description": "Decompose rational functions for integration. Factor denominator first."
+    },
+    {
+      "id": "definite_integral_property_symmetry",
+      "name": "King's Rule (Symmetry Property)",
+      "formula": "∫₀ᵃ f(x) dx = ∫₀ᵃ f(a − x) dx",
+      "description": "Replace x by a-x for definite integrals. Essential for JEE problems.",
+      "example": "∫₀^(π/2) sinⁿx/(sinⁿx+cosⁿx) dx = π/4 for any n"
+    },
+    {
+      "id": "definite_integral_even_odd",
+      "name": "Even/Odd Function Property",
+      "formula": "∫₋ₐᵃ f(x) dx = 2∫₀ᵃ f(x) dx if f is even; = 0 if f is odd",
+      "description": "Simplifies definite integrals of symmetric functions"
+    },
+    {
+      "id": "definite_integral_periodic",
+      "name": "Periodic Function Property",
+      "formula": "∫₀ⁿᵀ f(x) dx = n∫₀ᵀ f(x) dx if f has period T",
+      "description": "For periodic functions over multiple periods"
+    },
+    {
+      "id": "fundamental_theorem",
+      "name": "Fundamental Theorem of Calculus",
+      "formula": "∫ₐᵇ f(x) dx = F(b) − F(a) where F'(x) = f(x)",
+      "description": "Connects differentiation and integration"
+    },
+    {
+      "id": "area_curve",
+      "name": "Area Under Curve",
+      "formula": "Area = ∫ₐᵇ |f(x)| dx",
+      "description": "Use absolute value if curve goes below x-axis"
+    },
+    {
+      "id": "area_between_curves",
+      "name": "Area Between Two Curves",
+      "formula": "Area = ∫ₐᵇ |f(x) − g(x)| dx",
+      "description": "Subtract lower curve from upper curve"
+    },
+    {
+      "id": "leibniz_rule",
+      "name": "Leibniz Rule",
+      "formula": "d/dx ∫ₐ⁽ˣ⁾ᵇ⁽ˣ⁾ f(t)dt = f(b(x))b'(x) − f(a(x))a'(x)",
+      "description": "Differentiation under integral sign with variable limits"
+    }
+  ]
+}

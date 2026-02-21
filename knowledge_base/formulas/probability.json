@@ -1,0 +1,91 @@
+{
+  "topic": "Probability",
+  "formulas": [
+    {
+      "id": "probability_basic",
+      "name": "Classical Probability",
+      "formula": "P(E) = n(E)/n(S)",
+      "description": "Favorable outcomes divided by total outcomes. Valid when all outcomes equally likely."
+    },
+    {
+      "id": "complement",
+      "name": "Complement Rule",
+      "formula": "P(A') = 1 − P(A)",
+      "description": "Probability of event NOT happening"
+    },
+    {
+      "id": "addition_theorem",
+      "name": "Addition Theorem (Union)",
+      "formula": "P(A ∪ B) = P(A) + P(B) − P(A ∩ B)",
+      "description": "Inclusion-exclusion for two events. For mutually exclusive: P(A ∪ B) = P(A) + P(B)"
+    },
+    {
+      "id": "addition_three",
+      "name": "Addition Theorem (3 Events)",
+      "formula": "P(A∪B∪C) = P(A)+P(B)+P(C)−P(A∩B)−P(B∩C)−P(A∩C)+P(A∩B∩C)",
+      "description": "Inclusion-exclusion for three events"
+    },
+    {
+      "id": "conditional_probability",
+      "name": "Conditional Probability",
+      "formula": "P(A|B) = P(A ∩ B)/P(B)",
+      "description": "Probability of A given B has occurred"
+    },
+    {
+      "id": "multiplication_rule",
+      "name": "Multiplication Rule",
+      "formula": "P(A ∩ B) = P(A) × P(B|A) = P(B) × P(A|B)",
+      "description": "Probability both events occur"
+    },
+    {
+      "id": "independent_events",
+      "name": "Independent Events",
+      "formula": "P(A ∩ B) = P(A) × P(B) iff A and B are independent",
+      "description": "Events are independent if occurrence of one does not affect the other"
+    },
+    {
+      "id": "total_probability",
+      "name": "Total Probability Theorem",
+      "formula": "P(B) = Σ P(Aᵢ) × P(B|Aᵢ)",
+      "description": "When sample space is partitioned into events A₁, A₂, ..., Aₙ"
+    },
+    {
+      "id": "bayes",
+      "name": "Bayes' Theorem",
+      "formula": "P(Aᵢ|B) = P(Aᵢ)P(B|Aᵢ) / ΣP(Aⱼ)P(B|Aⱼ)",
+      "description": "Update probability of cause given observed effect",
+      "use_case": "Problems asking 'given that X happened, what is the probability it came from source Y?'"
+    },
+    {
+      "id": "binomial_distribution",
+      "name": "Binomial Distribution",
+      "formula": "P(X = k) = nCk × p^k × q^(n−k) where q = 1−p",
+      "description": "n independent trials, each with success probability p",
+      "example": "P(exactly 2 heads in 5 coin tosses) = 5C2 × (1/2)⁵ = 10/32"
+    },
+    {
+      "id": "binomial_mean_variance",
+      "name": "Binomial Mean & Variance",
+      "formula": "E(X) = np, Var(X) = npq",
+      "description": "Mean and variance of binomial distribution"
+    },
+    {
+      "id": "expectation",
+      "name": "Expected Value",
+      "formula": "E(X) = Σ xᵢpᵢ",
+      "description": "Weighted average of all possible values"
+    },
+    {
+      "id": "variance",
+      "name": "Variance",
+      "formula": "Var(X) = E(X²) − [E(X)]²",
+      "description": "Measure of spread. Always non-negative."
+    },
+    {
+      "id": "odds",
+      "name": "Odds",
+      "formula": "Odds in favor = P(A)/P(A'), Odds against = P(A')/P(A)",
+      "description": "Ratio of favorable to unfavorable probabilities"
+    }
+  ]
+}

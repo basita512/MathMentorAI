@@ -13,6 +13,7 @@ dependencies = [
     "sentence-transformers",
     "rank-bm25",
     "easyocr",
+    "opencv-python-headless",
     "pillow",
     "faster-whisper",
     "pydub",
@@ -31,6 +32,8 @@ dependencies = [
     "requests",
     "loguru",
     "pandas",
+    "plotly",
+    "tavily-python>=0.7.21",
 ]
 
 [build-system]

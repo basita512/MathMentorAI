@@ -1,0 +1,99 @@
+{
+  "topic": "Sequences & Series",
+  "formulas": [
+    {
+      "id": "ap_nth_term",
+      "name": "AP nth Term",
+      "formula": "aₙ = a + (n−1)d",
+      "description": "a = first term, d = common difference"
+    },
+    {
+      "id": "ap_sum",
+      "name": "Sum of AP",
+      "formula": "Sₙ = n/2 [2a + (n−1)d] = n/2 (first + last)",
+      "description": "Two equivalent forms for sum of arithmetic progression"
+    },
+    {
+      "id": "ap_insert_means",
+      "name": "Insert k AMs between a and b",
+      "formula": "d = (b − a)/(k + 1)",
+      "description": "Common difference when inserting k arithmetic means"
+    },
+    {
+      "id": "gp_nth_term",
+      "name": "GP nth Term",
+      "formula": "aₙ = ar^(n−1)",
+      "description": "a = first term, r = common ratio"
+    },
+    {
+      "id": "gp_sum_finite",
+      "name": "Sum of GP (Finite)",
+      "formula": "Sₙ = a(r^n − 1)/(r − 1) for r > 1; a(1 − r^n)/(1 − r) for r < 1",
+      "description": "Sum of first n terms of geometric progression"
+    },
+    {
+      "id": "gp_sum_infinite",
+      "name": "Sum of Infinite GP",
+      "formula": "S = a/(1 − r), |r| < 1",
+      "description": "Converges only when |r| < 1. Diverges otherwise.",
+      "example": "1 + 1/2 + 1/4 + ... = 1/(1−1/2) = 2"
+    },
+    {
+      "id": "am",
+      "name": "Arithmetic Mean",
+      "formula": "AM of a and b = (a + b)/2",
+      "description": "Single AM between two numbers"
+    },
+    {
+      "id": "gm",
+      "name": "Geometric Mean",
+      "formula": "GM of a and b = √(ab)",
+      "description": "Single GM between two positive numbers"
+    },
+    {
+      "id": "hm",
+      "name": "Harmonic Mean",
+      "formula": "HM of a and b = 2ab/(a + b)",
+      "description": "Reciprocals form an AP"
+    },
+    {
+      "id": "am_gm_hm",
+      "name": "AM-GM-HM Inequality",
+      "formula": "AM ≥ GM ≥ HM (equality when all terms equal)",
+      "description": "Fundamental inequality for positive real numbers. Very useful for min/max problems.",
+      "use_case": "Finding minimum of x + 1/x type expressions"
+    },
+    {
+      "id": "sum_natural",
+      "name": "Sum of First n Natural Numbers",
+      "formula": "Σk = n(n+1)/2",
+      "description": "Sum 1 + 2 + 3 + ... + n"
+    },
+    {
+      "id": "sum_squares",
+      "name": "Sum of Squares",
+      "formula": "Σk² = n(n+1)(2n+1)/6",
+      "description": "Sum 1² + 2² + 3² + ... + n²"
+    },
+    {
+      "id": "sum_cubes",
+      "name": "Sum of Cubes",
+      "formula": "Σk³ = [n(n+1)/2]²",
+      "description": "Sum of cubes equals square of sum of natural numbers"
+    },
+    {
+      "id": "agp",
+      "name": "Arithmetico-Geometric Series",
+      "formula": "Sum = a·b/(1−r) + d·b·r/(1−r)² for infinite AGP",
+      "description": "Series where nth term = (AP term)(GP term). Use S − rS method.",
+      "example": "1·1 + 2·(1/2) + 3·(1/4) + ... uses S − rS technique"
+    },
+    {
+      "id": "telescoping",
+      "name": "Telescoping Series",
+      "formula": "Σ[f(k) − f(k+1)] = f(1) − f(n+1)",
+      "description": "Most terms cancel. Use partial fractions: 1/(k(k+1)) = 1/k − 1/(k+1)",
+      "example": "Σ1/(k(k+1)) = 1 − 1/(n+1) = n/(n+1)"
+    }
+  ]
+}

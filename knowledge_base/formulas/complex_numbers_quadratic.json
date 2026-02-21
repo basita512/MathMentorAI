@@ -1,0 +1,116 @@
+{
+  "topic": "Complex Numbers & Quadratic Equations",
+  "formulas": [
+    {
+      "id": "complex_form",
+      "name": "Complex Number",
+      "formula": "z = a + ib where i² = −1",
+      "description": "Standard form of complex number, a = real part, b = imaginary part"
+    },
+    {
+      "id": "conjugate",
+      "name": "Conjugate",
+      "formula": "z̄ = a − ib",
+      "description": "Reflection of z about real axis"
+    },
+    {
+      "id": "modulus",
+      "name": "Modulus",
+      "formula": "|z| = √(a² + b²)",
+      "description": "Distance from origin in complex plane"
+    },
+    {
+      "id": "argument",
+      "name": "Argument",
+      "formula": "arg(z) = tan⁻¹(b/a) adjusted for quadrant",
+      "description": "Angle with positive real axis. Must check quadrant! Q1: θ, Q2: π−θ, Q3: −π+θ, Q4: −θ"
+    },
+    {
+      "id": "polar_form",
+      "name": "Polar Form",
+      "formula": "z = r(cosθ + i sinθ) = re^(iθ)",
+      "description": "r = |z|, θ = arg(z). Euler's form: re^(iθ)"
+    },
+    {
+      "id": "euler_formula",
+      "name": "Euler's Formula",
+      "formula": "e^(iθ) = cosθ + i sinθ",
+      "description": "Connects exponential and trigonometric functions"
+    },
+    {
+      "id": "de_moivre",
+      "name": "De Moivre's Theorem",
+      "formula": "(cosθ + i sinθ)^n = cos(nθ) + i sin(nθ)",
+      "description": "Powerful tool for computing powers of complex numbers and finding nth roots",
+      "use_case": "Finding cube roots of unity, nth roots of any complex number"
+    },
+    {
+      "id": "modulus_product",
+      "name": "Modulus of Product",
+      "formula": "|z₁z₂| = |z₁||z₂|",
+      "description": "Modulus is multiplicative"
+    },
+    {
+      "id": "argument_product",
+      "name": "Argument of Product",
+      "formula": "arg(z₁z₂) = arg(z₁) + arg(z₂)",
+      "description": "Arguments add when multiplying"
+    },
+    {
+      "id": "modulus_conjugate",
+      "name": "Modulus-Conjugate Relation",
+      "formula": "z·z̄ = |z|²",
+      "description": "Product of complex number and its conjugate equals modulus squared"
+    },
+    {
+      "id": "triangle_inequality",
+      "name": "Triangle Inequality",
+      "formula": "||z₁| − |z₂|| ≤ |z₁ + z₂| ≤ |z₁| + |z₂|",
+      "description": "Both upper and lower bounds for modulus of sum"
+    },
+    {
+      "id": "cube_roots_unity",
+      "name": "Cube Roots of Unity",
+      "formula": "1, ω, ω² where ω = (−1+i√3)/2",
+      "description": "Properties: 1 + ω + ω² = 0, ω³ = 1",
+      "use_case": "Factorization and simplification problems"
+    },
+    {
+      "id": "quadratic_formula",
+      "name": "Quadratic Formula",
+      "formula": "x = (−b ± √(b² − 4ac))/2a",
+      "description": "Roots of ax² + bx + c = 0"
+    },
+    {
+      "id": "discriminant",
+      "name": "Discriminant",
+      "formula": "D = b² − 4ac",
+      "description": "D > 0: distinct real roots, D = 0: equal roots, D < 0: complex conjugate roots"
+    },
+    {
+      "id": "vieta_sum",
+      "name": "Vieta's Formula (Sum of Roots)",
+      "formula": "α + β = −b/a",
+      "description": "Sum of roots of quadratic ax² + bx + c = 0"
+    },
+    {
+      "id": "vieta_product",
+      "name": "Vieta's Formula (Product of Roots)",
+      "formula": "αβ = c/a",
+      "description": "Product of roots of quadratic"
+    },
+    {
+      "id": "sum_of_squares_roots",
+      "name": "Sum of Squares of Roots",
+      "formula": "α² + β² = (α + β)² − 2αβ",
+      "description": "Express symmetric functions of roots using Vieta's formulas",
+      "example": "If roots of x²−7x+10=0: α²+β² = 49−20 = 29"
+    },
+    {
+      "id": "max_min_quadratic",
+      "name": "Maximum/Minimum of Quadratic",
+      "formula": "Extreme value at x = −b/2a, value = (4ac − b²)/4a",
+      "description": "a > 0 → minimum, a < 0 → maximum"
+    }
+  ]
+}

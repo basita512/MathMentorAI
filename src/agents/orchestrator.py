@@ -1,5 +1,6 @@
 """Agent orchestrator."""
 from src.agents.parser import ParserAgent
+from src.agents.router import RouterAgent
 from src.agents.solver import SolverAgent
 from src.agents.verifier import VerifierAgent
 from src.agents.explainer import ExplainerAgent
@@ -13,6 +14,7 @@ class Orchestrator:
     def __init__(self):
         self.vs = VectorStore()
         self.parser = ParserAgent()
+        self.router = RouterAgent()
         self.solver = SolverAgent(self.vs)
         self.verifier = VerifierAgent()
         self.explainer = ExplainerAgent()
@@ -33,8 +35,13 @@ class Orchestrator:
                 'message': f"Ambiguities found: {', '.join(parsed.ambiguities)}"
             }
         
-        # Step 2: Solve
-        solve_result = self.solver.solve(parsed.problem_text, parsed.topic)
+        # Step 2: Route
+        routing = self.router.route(parsed.problem_text)
+        logger.info(f"Routing decision: {routing['routing_explanation']}")
+        
+        # Step 3: Solve (use routed topic if available)
+        topic = routing.get('topic', parsed.topic)
+        solve_result = self.solver.solve(parsed.problem_text, topic)
         
         # Step 3: Verify
         verification = self.verifier.verify(parsed.problem_text, solve_result['solution'])
@@ -58,6 +65,7 @@ class Orchestrator:
         return {
             'status': 'success',
             'parsed': parsed,
+            'routing': routing,
             'solution': solve_result['solution'],
             'verification': verification,
             'explanation': explanation,

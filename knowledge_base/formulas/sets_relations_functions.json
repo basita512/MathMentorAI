@@ -1,0 +1,107 @@
+{
+  "topic": "Sets, Relations & Functions",
+  "formulas": [
+    {
+      "id": "power_set",
+      "name": "Power Set",
+      "formula": "|P(A)| = 2^n",
+      "description": "Number of subsets of a set with n elements, including empty set and the set itself"
+    },
+    {
+      "id": "union_count",
+      "name": "Union Count (Inclusion-Exclusion)",
+      "formula": "|A ∪ B| = |A| + |B| − |A ∩ B|",
+      "description": "Count of elements in union of two sets"
+    },
+    {
+      "id": "demorgan_1",
+      "name": "De Morgan's Law 1",
+      "formula": "(A ∪ B)' = A' ∩ B'",
+      "description": "Complement of union equals intersection of complements"
+    },
+    {
+      "id": "demorgan_2",
+      "name": "De Morgan's Law 2",
+      "formula": "(A ∩ B)' = A' ∪ B'",
+      "description": "Complement of intersection equals union of complements"
+    },
+    {
+      "id": "number_relations",
+      "name": "Number of Relations",
+      "formula": "From set A to set B: 2^(|A|×|B|)",
+      "description": "Each element of A×B either belongs to relation or not"
+    },
+    {
+      "id": "number_functions",
+      "name": "Number of Functions",
+      "formula": "From A to B: |B|^|A|",
+      "description": "Each element of A maps to exactly one element of B"
+    },
+    {
+      "id": "reflexive",
+      "name": "Reflexive Relation",
+      "formula": "(a, a) ∈ R for all a ∈ A",
+      "description": "Every element is related to itself"
+    },
+    {
+      "id": "symmetric",
+      "name": "Symmetric Relation",
+      "formula": "(a, b) ∈ R ⟹ (b, a) ∈ R",
+      "description": "If a is related to b, then b is related to a"
+    },
+    {
+      "id": "transitive",
+      "name": "Transitive Relation",
+      "formula": "(a, b) ∈ R and (b, c) ∈ R ⟹ (a, c) ∈ R",
+      "description": "Relation chains through intermediate elements"
+    },
+    {
+      "id": "equivalence",
+      "name": "Equivalence Relation",
+      "formula": "Reflexive + Symmetric + Transitive",
+      "description": "All three properties required. Equivalence relations partition the set into disjoint classes."
+    },
+    {
+      "id": "injective",
+      "name": "One-One (Injective) Function",
+      "formula": "f(a) = f(b) ⟹ a = b",
+      "description": "Different inputs give different outputs. No two elements map to same value."
+    },
+    {
+      "id": "surjective",
+      "name": "Onto (Surjective) Function",
+      "formula": "Range = Codomain",
+      "description": "Every element in codomain has at least one preimage"
+    },
+    {
+      "id": "bijective",
+      "name": "Bijective Function",
+      "formula": "One-One + Onto",
+      "description": "Bijective functions are invertible. |A| = |B| required for bijection between finite sets."
+    },
+    {
+      "id": "inverse_function",
+      "name": "Inverse Function",
+      "formula": "f⁻¹ exists ⟺ f is bijective",
+      "description": "To find inverse: set y=f(x), solve for x, swap x and y"
+    },
+    {
+      "id": "composition",
+      "name": "Composition of Functions",
+      "formula": "(f ∘ g)(x) = f(g(x))",
+      "description": "Apply g first, then f. NOT commutative: f∘g ≠ g∘f in general."
+    },
+    {
+      "id": "number_surjections",
+      "name": "Number of Surjections",
+      "formula": "Σ(−1)^k × nCk × (n−k)^m for A(m elements) to B(n elements)",
+      "description": "Using inclusion-exclusion principle"
+    },
+    {
+      "id": "number_bijections",
+      "name": "Number of Bijections",
+      "formula": "n! (when |A| = |B| = n)",
+      "description": "Bijection is essentially a permutation"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+# RAG (Retrieval-Augmented Generation) Configuration
+# Settings for hybrid retrieval and knowledge base management
+
+# Hybrid Retrieval Settings
+hybrid_retrieval:
+  # BM25 (keyword-based) retrieval
+  bm25:
+    enabled: true
+    k1: 1.5  # Term frequency saturation
+    b: 0.75  # Length normalization
+    weight: 0.3  # Weight in hybrid scoring
+    
+  # Dense Vector (semantic) retrieval
+  dense:
+    enabled: true
+    model: "sentence-transformers/all-MiniLM-L6-v2"
+    embedding_dim: 384
+    weight: 0.7  # Weight in hybrid scoring
+    
+  # Retrieval parameters
+  top_k: 5  # Number of documents to retrieve
+  min_score: 0.3  # Minimum relevance score
+
+# Vector Store Settings
+vector_store:
+  type: "faiss"  # Options: faiss, chromadb, pinecone
+  index_type: "IVFFlat"  # FAISS index type
+  nlist: 100  # Number of clusters for IVFFlat
+  nprobe: 10  # Number of clusters to search
+  distance_metric: "cosine"  # Options: cosine, euclidean, dot_product
+  
+  # Persistence
+  persist_path: "data/vector_store"
+  auto_save: true
+  save_frequency: 100  # Save every N additions
+
+# Knowledge Base Settings
+knowledge_base:
+  # File paths
+  formulas_path: "knowledge_base/formulas"
+  templates_path: "knowledge_base/templates"
+  examples_path: "knowledge_base/examples"
+  mistakes_path: "knowledge_base/common_mistakes"
+  
+  # Processing
+  chunk_size: 512  # Characters per chunk
+  chunk_overlap: 50  # Overlap between chunks
+  
+  # Indexing
+  auto_reindex: false
+  index_on_startup: true
+
+# Reranking
+reranking:
+  enabled: true
+  model: "cross-encoder/ms-marco-MiniLM-L-6-v2"
+  top_n: 3  # Number of documents after reranking
+
+# Query expansion
+query_expansion:
+  enabled: true
+  max_synonyms: 3
+  use_semantic_memory: true  # Use knowledge graph for expansion

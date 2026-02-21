@@ -58,13 +58,40 @@ class VectorStore:
         )
         
         documents = []
-        for i in range(len(results['documents'][0])):
-            documents.append({
-                'text': results['documents'][0][i],
-                'metadata': results['metadatas'][0][i],
-                'distance': results['distances'][0][i],
-                'score': 1 - results['distances'][0][i]  # Convert distance to similarity
-            })
+        if results['documents']:
+            for i in range(len(results['documents'][0])):
+                documents.append({
+                    'text': results['documents'][0][i],
+                    'metadata': results['metadatas'][0][i],
+                    'distance': results['distances'][0][i],
+                    'score': 1 - results['distances'][0][i]  # Convert distance to similarity
+                })
+        
+        return documents
+
+    def search_with_filter(self, query: str, filter_dict: dict, top_k: int = 3) -> list:
+        """Search with metadata filtering."""
+        query_embedding = self.embedder.encode(query).tolist()
+        
+        try:
+            results = self.collection.query(
+                query_embeddings=[query_embedding],
+                n_results=top_k,
+                where=filter_dict
+            )
+        except Exception as e:
+            logger.warning(f"Error in search_with_filter: {e}")
+            return []
+            
+        documents = []
+        if results['documents']:
+            for i in range(len(results['documents'][0])):
+                documents.append({
+                    'text': results['documents'][0][i],
+                    'metadata': results['metadatas'][0][i],
+                    'distance': results['distances'][0][i],
+                    'score': 1 - results['distances'][0][i]
+                })
         
         return documents
     
@@ -156,6 +183,92 @@ class VectorStore:
         logger.info(f"Hybrid search returned {len(results)} results")
         
         return results
+
+    def search_diverse(
+        self, 
+        query: str, 
+        top_k: int = 5,
+        dense_weight: float = 0.7,
+        sparse_weight: float = 0.3
+    ) -> List[Dict]:
+        """
+        Search for documents and ensure diversity across types (formula, template, example).
+        
+        Args:
+            query: Search query
+            top_k: Total number of results to return
+            dense_weight: Weight for dense retrieval
+            sparse_weight: Weight for sparse retrieval
+            
+        Returns:
+            List of diverse documents
+        """
+        # 1. Fetch more results initially to insure we have candidates from all categories
+        candidates = self.hybrid_search(
+            query, 
+            top_k=top_k * 3, 
+            dense_weight=dense_weight, 
+            sparse_weight=sparse_weight
+        )
+        
+        if not candidates:
+            return []
+            
+        # 2. Group by type
+        # We look for: 'formula', 'template_method' (or template_*), 'example_solution'
+        by_type = {
+            'formula': [],
+            'template': [],
+            'example': [],
+            'other': []
+        }
+        
+        for doc in candidates:
+            dtype = doc.get('metadata', {}).get('type', 'other')
+            if dtype == 'formula':
+                by_type['formula'].append(doc)
+            elif 'template' in dtype:
+                by_type['template'].append(doc)
+            elif 'example' in dtype:
+                by_type['example'].append(doc)
+            else:
+                by_type['other'].append(doc)
+        
+        # 3. Select at least one of each (if available)
+        diverse_results = []
+        seen_texts = set()
+        
+        # Priority 1: Top Formula
+        if by_type['formula']:
+            doc = by_type['formula'][0]
+            diverse_results.append(doc)
+            seen_texts.add(doc['text'])
+            
+        # Priority 2: Top Template
+        if by_type['template']:
+            doc = by_type['template'][0]
+            diverse_results.append(doc)
+            seen_texts.add(doc['text'])
+            
+        # Priority 3: Top Example
+        if by_type['example']:
+            doc = by_type['example'][0]
+            diverse_results.append(doc)
+            seen_texts.add(doc['text'])
+            
+        # 4. Fill remaining slots with the best remaining candidates regardless of type
+        # Sort remaining candidates by their hybrid score
+        remaining = [c for c in candidates if c['text'] not in seen_texts]
+        
+        # Already sorted by hybrid_score from hybrid_search call
+        for doc in remaining:
+            if len(diverse_results) >= top_k:
+                break
+            diverse_results.append(doc)
+            
+        logger.info(f"Diverse search returned {len(diverse_results)} results across {len(set(d['metadata'].get('type') for d in diverse_results))} categories")
+        
+        return diverse_results
     
     def _build_bm25_index(self):
         """Build BM25 index from all documents in collection."""

@@ -7,7 +7,9 @@ __pycache__/
 data/uploads/*
 !data/uploads/.gitkeep
 data/chromadb/
+data/vector_store/
 *.db
 .pytest_cache/
 .ruff_cache/
+docs
 scripts

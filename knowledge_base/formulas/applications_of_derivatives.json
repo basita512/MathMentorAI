@@ -1,0 +1,85 @@
+{
+  "topic": "Applications of Derivatives",
+  "formulas": [
+    {
+      "id": "rate_of_change",
+      "name": "Rate of Change",
+      "formula": "Rate = dy/dx",
+      "description": "Derivative gives instantaneous rate of change",
+      "example": "If s(t) = 5t², velocity v = ds/dt = 10t"
+    },
+    {
+      "id": "tangent_slope",
+      "name": "Slope of Tangent",
+      "formula": "m = dy/dx at (x₁, y₁)",
+      "description": "Evaluate derivative at the given point to get slope"
+    },
+    {
+      "id": "tangent_equation",
+      "name": "Equation of Tangent",
+      "formula": "y − y₁ = m(x − x₁) where m = f'(x₁)",
+      "description": "Tangent line touches curve at exactly one point locally"
+    },
+    {
+      "id": "normal_equation",
+      "name": "Equation of Normal",
+      "formula": "y − y₁ = −(1/m)(x − x₁) where m = f'(x₁)",
+      "description": "Normal is perpendicular to tangent. Slope of normal = −1/slope of tangent"
+    },
+    {
+      "id": "increasing_function",
+      "name": "Increasing Function",
+      "formula": "f'(x) > 0 in interval",
+      "description": "Function is increasing where derivative is positive"
+    },
+    {
+      "id": "decreasing_function",
+      "name": "Decreasing Function",
+      "formula": "f'(x) < 0 in interval",
+      "description": "Function is decreasing where derivative is negative"
+    },
+    {
+      "id": "critical_point",
+      "name": "Critical Point",
+      "formula": "f'(x) = 0 or f'(x) undefined",
+      "description": "Points where function may have local maxima, minima, or inflection"
+    },
+    {
+      "id": "first_derivative_test",
+      "name": "First Derivative Test",
+      "formula": "f' changes from + to − → local max; f' changes from − to + → local min",
+      "description": "Check sign change of f' around critical point"
+    },
+    {
+      "id": "second_derivative_test",
+      "name": "Second Derivative Test",
+      "formula": "At f'(c)=0: f''(c) > 0 → local min; f''(c) < 0 → local max",
+      "description": "Faster than first derivative test when f'' is easy to compute. Inconclusive if f''(c) = 0."
+    },
+    {
+      "id": "point_of_inflection",
+      "name": "Point of Inflection",
+      "formula": "f''(x) = 0 and f'' changes sign",
+      "description": "Point where concavity changes from up to down or vice versa"
+    },
+    {
+      "id": "error_approximation",
+      "name": "Linear Approximation / Error",
+      "formula": "Δy ≈ dy = f'(x)Δx",
+      "description": "Approximate change in function using derivative"
+    },
+    {
+      "id": "lhopital_rule",
+      "name": "L'Hôpital's Rule",
+      "formula": "lim f(x)/g(x) = lim f'(x)/g'(x) for 0/0 or ∞/∞ forms",
+      "description": "Differentiate numerator and denominator separately. Can apply repeatedly.",
+      "use_case": "Use when direct substitution gives indeterminate form"
+    },
+    {
+      "id": "absolute_max_min",
+      "name": "Global Max/Min on Closed Interval",
+      "formula": "Compare f(a), f(b), and f(c) where f'(c) = 0",
+      "description": "Evaluate function at endpoints and all critical points in [a,b]"
+    }
+  ]
+}

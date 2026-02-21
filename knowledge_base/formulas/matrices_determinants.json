@@ -1,0 +1,102 @@
+{
+  "topic": "Matrices & Determinants",
+  "formulas": [
+    {
+      "id": "matrix_multiplication",
+      "name": "Matrix Multiplication",
+      "formula": "(AB)ᵢⱼ = Σ Aᵢₖ × Bₖⱼ",
+      "description": "Row of A times column of B. A(m×n) × B(n×p) = C(m×p). NOT commutative: AB ≠ BA generally."
+    },
+    {
+      "id": "det_2x2",
+      "name": "Determinant (2×2)",
+      "formula": "|A| = ad − bc for [[a,b],[c,d]]",
+      "description": "Cross-multiply diagonals and subtract"
+    },
+    {
+      "id": "det_3x3",
+      "name": "Determinant (3×3)",
+      "formula": "|A| = a(ei−fh) − b(di−fg) + c(dh−eg)",
+      "description": "Expand along any row or column using cofactors"
+    },
+    {
+      "id": "det_scalar_multiple",
+      "name": "Determinant of Scalar Multiple",
+      "formula": "|kA| = k^n |A| for n×n matrix",
+      "description": "Common mistake: |kA| ≠ k|A|. Each row gets multiplied by k.",
+      "example": "|3A| for 3×3 matrix = 3³|A| = 27|A|"
+    },
+    {
+      "id": "det_product",
+      "name": "Determinant of Product",
+      "formula": "|AB| = |A| × |B|",
+      "description": "Determinant of product equals product of determinants"
+    },
+    {
+      "id": "det_transpose",
+      "name": "Determinant of Transpose",
+      "formula": "|Aᵀ| = |A|",
+      "description": "Transpose does not change determinant"
+    },
+    {
+      "id": "det_inverse",
+      "name": "Determinant of Inverse",
+      "formula": "|A⁻¹| = 1/|A|",
+      "description": "Determinant of inverse is reciprocal"
+    },
+    {
+      "id": "inverse_matrix",
+      "name": "Inverse of Matrix",
+      "formula": "A⁻¹ = adj(A)/|A|, exists only when |A| ≠ 0",
+      "description": "Matrix is invertible (non-singular) iff determinant is non-zero"
+    },
+    {
+      "id": "inverse_2x2",
+      "name": "Inverse of 2×2 Matrix",
+      "formula": "A⁻¹ = (1/|A|)[[d,−b],[−c,a]] for A = [[a,b],[c,d]]",
+      "description": "Swap diagonal, negate off-diagonal, divide by determinant"
+    },
+    {
+      "id": "inverse_product",
+      "name": "Inverse of Product",
+      "formula": "(AB)⁻¹ = B⁻¹A⁻¹",
+      "description": "Order reverses for inverse of product"
+    },
+    {
+      "id": "transpose_product",
+      "name": "Transpose of Product",
+      "formula": "(AB)ᵀ = BᵀAᵀ",
+      "description": "Order reverses for transpose of product"
+    },
+    {
+      "id": "cramers_rule",
+      "name": "Cramer's Rule",
+      "formula": "xᵢ = Δᵢ/Δ where Δ = det of coefficient matrix",
+      "description": "Solve system of linear equations using determinants. Unique solution when Δ ≠ 0."
+    },
+    {
+      "id": "area_triangle",
+      "name": "Area of Triangle Using Determinant",
+      "formula": "Area = (1/2)|x₁(y₂−y₃) + x₂(y₃−y₁) + x₃(y₁−y₂)|",
+      "description": "Vertices at (x₁,y₁), (x₂,y₂), (x₃,y₃)"
+    },
+    {
+      "id": "collinearity",
+      "name": "Collinearity Condition",
+      "formula": "Area = 0 ⟹ points are collinear",
+      "description": "Three points are collinear if the triangle area determinant = 0"
+    },
+    {
+      "id": "cayley_hamilton",
+      "name": "Cayley-Hamilton Theorem",
+      "formula": "Every matrix satisfies its own characteristic equation",
+      "description": "If det(A−λI) = λ²−5λ−2, then A²−5A−2I = 0. Used to find A⁻¹ and higher powers."
+    },
+    {
+      "id": "rank_nullity",
+      "name": "Rank-Nullity Theorem",
+      "formula": "Rank(A) + Nullity(A) = n (number of columns)",
+      "description": "Relates rank to null space dimension"
+    }
+  ]
+}

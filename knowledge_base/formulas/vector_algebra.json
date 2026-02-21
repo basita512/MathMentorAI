@@ -1,0 +1,119 @@
+{
+  "topic": "Vector Algebra",
+  "formulas": [
+    {
+      "id": "magnitude",
+      "name": "Magnitude of Vector",
+      "formula": "|ā| = √(a₁² + a₂² + a₃²)",
+      "description": "Length of vector in 3D space"
+    },
+    {
+      "id": "unit_vector",
+      "name": "Unit Vector",
+      "formula": "â = ā/|ā|",
+      "description": "Vector of magnitude 1 in direction of ā"
+    },
+    {
+      "id": "position_vector",
+      "name": "Position Vector",
+      "formula": "Vector of point P(x,y,z) = xi + yj + zk",
+      "description": "Vector from origin to point P"
+    },
+    {
+      "id": "dot_product_formula",
+      "name": "Dot Product (Component Form)",
+      "formula": "ā·b̄ = a₁b₁ + a₂b₂ + a₃b₃",
+      "description": "Scalar result. Also called scalar product or inner product."
+    },
+    {
+      "id": "dot_product_angle",
+      "name": "Dot Product (Angle Form)",
+      "formula": "ā·b̄ = |ā||b̄|cosθ → cosθ = (ā·b̄)/(|ā||b̄|)",
+      "description": "Used to find angle between vectors"
+    },
+    {
+      "id": "perpendicular_condition",
+      "name": "Perpendicular Vectors",
+      "formula": "ā·b̄ = 0 ⟺ ā ⊥ b̄",
+      "description": "Vectors are perpendicular when dot product = 0"
+    },
+    {
+      "id": "projection_scalar",
+      "name": "Scalar Projection",
+      "formula": "Projection of ā on b̄ = (ā·b̄)/|b̄|",
+      "description": "Signed length of projection. Positive if same direction."
+    },
+    {
+      "id": "projection_vector",
+      "name": "Vector Projection",
+      "formula": "Projection vector of ā on b̄ = [(ā·b̄)/|b̄|²]b̄",
+      "description": "Vector component of ā along b̄"
+    },
+    {
+      "id": "cross_product",
+      "name": "Cross Product",
+      "formula": "ā×b̄ = |i j k; a₁ a₂ a₃; b₁ b₂ b₃| (determinant form)",
+      "description": "Vector perpendicular to both ā and b̄. |ā×b̄| = |ā||b̄|sinθ"
+    },
+    {
+      "id": "cross_product_properties",
+      "name": "Cross Product Properties",
+      "formula": "ā×b̄ = −(b̄×ā), ā×ā = 0̄",
+      "description": "Anti-commutative. Cross product of parallel vectors = zero vector."
+    },
+    {
+      "id": "parallel_condition",
+      "name": "Parallel Vectors",
+      "formula": "ā×b̄ = 0̄ ⟺ ā ∥ b̄",
+      "description": "Vectors are parallel when cross product is zero vector"
+    },
+    {
+      "id": "area_triangle",
+      "name": "Area of Triangle",
+      "formula": "Area = (1/2)|ā×b̄|",
+      "description": "Half the magnitude of cross product of two edge vectors"
+    },
+    {
+      "id": "area_parallelogram",
+      "name": "Area of Parallelogram",
+      "formula": "Area = |ā×b̄|",
+      "description": "Magnitude of cross product of adjacent sides"
+    },
+    {
+      "id": "scalar_triple_product",
+      "name": "Scalar Triple Product",
+      "formula": "[ā b̄ c̄] = ā·(b̄×c̄) = determinant of 3×3 matrix",
+      "description": "Result is a scalar. Represents signed volume of parallelepiped."
+    },
+    {
+      "id": "volume",
+      "name": "Volume of Parallelepiped",
+      "formula": "V = |ā·(b̄×c̄)| = |[ā b̄ c̄]|",
+      "description": "Absolute value of scalar triple product"
+    },
+    {
+      "id": "volume_tetrahedron",
+      "name": "Volume of Tetrahedron",
+      "formula": "V = (1/6)|ā·(b̄×c̄)|",
+      "description": "One-sixth of parallelepiped volume"
+    },
+    {
+      "id": "coplanarity",
+      "name": "Coplanarity Condition",
+      "formula": "[ā b̄ c̄] = ā·(b̄×c̄) = 0",
+      "description": "Vectors are coplanar if scalar triple product = 0"
+    },
+    {
+      "id": "vector_triple_product",
+      "name": "Vector Triple Product (BAC-CAB)",
+      "formula": "ā×(b̄×c̄) = b̄(ā·c̄) − c̄(ā·b̄)",
+      "description": "BAC minus CAB rule. Result is a vector in the plane of b̄ and c̄."
+    },
+    {
+      "id": "lagrange_identity",
+      "name": "Lagrange's Identity",
+      "formula": "|ā×b̄|² = |ā|²|b̄|² − (ā·b̄)²",
+      "description": "Relates cross product to dot product and magnitudes"
+    }
+  ]
+}
