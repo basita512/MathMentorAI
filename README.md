@@ -1,13 +1,30 @@
-# AI Math Mentor
-### [Architecture](docs/architecture.md) | [API Reference](docs/API.md) | [Implementation](brain/walkthrough.md) | [Deployment](brain/deployment_guide.md)
+<p align="center">
+  <img src="https://img.icons8.com/fluency/96/math.png" alt="MathMentorAI Logo" width="80" />
+</p>
 
-**Hybrid RAG-Powered Math Problem Solver with LangGraph Orchestration**
+<h1 align="center">AI Math Mentor</h1>
 
-A standout AI-powered math tutor built for hiring assignments, demonstrating advanced RAG techniques, state-based orchestration, and production-ready observability. Solves JEE-level mathematics with multimodal input, self-learning, and human-in-the-loop capabilities.
+<p align="center">
+  <strong>A production-grade math tutor combining Hybrid RAG, LangGraph orchestration, and multi-modal interaction.</strong>
+</p>
 
-## Live Application
+<p align="center">
+  <a href="https://mathmentorai.streamlit.app">
+    <img src="https://img.shields.io/badge/Live_App-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live App" />
+  </a>
+  <img src="https://img.shields.io/badge/LLM-Groq_Llama_3.3-orange?style=for-the-badge" alt="LLM" />
+  <img src="https://img.shields.io/badge/Orchestrator-LangGraph-blue?style=for-the-badge" alt="Orchestrator" />
+  <img src="https://img.shields.io/badge/Vector_DB-ChromaDB-black?style=for-the-badge" alt="Vector DB" />
+</p>
 
-[Try MathMentorAI Live](https://mathmentorai.streamlit.app)
+<p align="center">
+  <a href="docs/architecture.md">Architecture</a> •
+  <a href="docs/API.md">API Reference</a> •
+  <a href="brain/walkthrough.md">Implementation</a> •
+  <a href="brain/deployment_guide.md">Deployment</a>
+</p>
+
+---
 
 ## What Makes This Different
 
